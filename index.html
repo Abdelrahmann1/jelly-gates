@@ -136,7 +136,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- hero ---------- */
 .hero { padding-block: 1.5rem clamp(3rem, 9vw, 5rem); }
-.hero__grid { display: grid; gap: 2.75rem; justify-items: center; text-align: center; }
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.75rem; justify-items: center; text-align: center; }
+.hero__text { width: 100%; }
 .hero__icon {
   display: block; width: 6rem; height: 6rem; margin-inline: auto; border-radius: 22.5%;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 14px 34px rgba(0, 0, 0, .5);
@@ -171,7 +172,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero__note { margin-top: 1rem; color: var(--muted); font-size: .95rem; }
 
 /* store buttons */
-.stores { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; max-width: 23rem; margin: 1.75rem auto 0; }
+.stores { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.25rem, 1fr)); gap: .75rem; max-width: 23rem; margin: 1.75rem auto 0; }
 .store {
   position: relative;
   display: flex; flex-direction: column; justify-content: center;
@@ -302,7 +303,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 @media (min-width: 58em) {
   .hero { padding-top: 2.5rem; }
-  .hero__grid { grid-template-columns: 1.1fr .9fr; align-items: center; justify-items: start; text-align: left; gap: 2rem; }
+  .hero__grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; justify-items: start; text-align: left; gap: 2rem; }
   .hero__icon { width: 7rem; height: 7rem; margin-inline: 0; }
   .logo { font-size: clamp(5.5rem, 9.5vw, 7.25rem); }
   .hero__pitch { margin-left: 0; }
