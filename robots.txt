@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdelrahmann1.github.io/jelly-gates/sitemap.xml
